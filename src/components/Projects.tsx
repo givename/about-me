@@ -1,4 +1,4 @@
-import React from "react";
+
 import "./Projects.css";
 
 const Projects = () => {
@@ -83,7 +83,7 @@ const Projects = () => {
         </div>
         <div className="projects-grid">
           {projects.map((project, index) => (
-            <div key={index} className="project-card" style={{"--project-color": project.color}}>
+                         <div key={index} className="project-card" style={{"--project-color": project.color} as any}>
               <div className="project-header">
                 <div className="project-icon">{project.icon}</div>
                 <div className="project-info">

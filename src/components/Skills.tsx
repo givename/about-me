@@ -1,4 +1,4 @@
-import React from "react";
+
 import "./Skills.css";
 
 const Skills = () => {
@@ -42,7 +42,7 @@ const Skills = () => {
         <div className="skills-section-content">
           <div className="skills-grid">
             {skills.map((skillGroup, index) => (
-              <div key={index} className="skill-category" style={{"--category-color": skillGroup.color}}>
+              <div key={index} className="skill-category" style={{"--category-color": skillGroup.color} as any}>
                 <div className="category-header">
                   <span className="category-icon">{skillGroup.icon}</span>
                   <h3 className="category-title">{skillGroup.category}</h3>

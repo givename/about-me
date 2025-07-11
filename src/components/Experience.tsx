@@ -1,4 +1,4 @@
-import React from "react";
+
 import "./Experience.css";
 
 const Experience = () => {
@@ -57,7 +57,7 @@ const Experience = () => {
         <h2 className="section-title">Опыт работы</h2>
         <div className="experience-timeline">
           {experience.map((job, index) => (
-            <div key={index} className="timeline-item" style={{"--job-color": job.color}}>
+            <div key={index} className="timeline-item" style={{"--job-color": job.color} as any}>
               <div className="timeline-marker">
                 <div className="timeline-icon">{job.icon}</div>
               </div>

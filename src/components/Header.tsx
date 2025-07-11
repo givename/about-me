@@ -1,15 +1,7 @@
-import React from "react";
+
 import "./Header.css";
 
 const Header = () => {
-  const personalInfo = {
-    name: "Мидзяев Кирилл Игоревич",
-    email: "k.midzyaev@ya.ru",
-    phone: "+7 (928) 2510506",
-    telegram: "kirillmid",
-    github: "givename"
-  };
-
   const stats = [
     { number: "3+", label: "Года опыта", icon: "💼" },
     { number: "4", label: "Компании", icon: "🏢" },
