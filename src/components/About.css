@@ -1,0 +1,40 @@
+.about-section-content {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.about-content {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #374151;
+  width: 100%;
+}
+
+.about-paragraph {
+  margin-bottom: 20px;
+  text-align: left;
+  width: 100%;
+  word-wrap: break-word;
+  line-height: 1.8;
+}
+
+.about-paragraph strong {
+  color: #1e40af;
+  font-weight: 600;
+}
+
+.about-paragraph:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .about-section-content {
+    padding: 0 20px;
+  }
+  
+  .about-content {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+} 

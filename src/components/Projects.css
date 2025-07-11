@@ -1,0 +1,239 @@
+.projects-intro {
+  text-align: center;
+  margin-bottom: 40px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.projects-intro p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #64748b;
+  font-style: italic;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.project-card {
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+  border-radius: 20px;
+  padding: 30px;
+  border: 2px solid #e2e8f0;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.project-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--project-color);
+  border-radius: 20px 20px 0 0;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+  border-color: var(--project-color);
+}
+
+.project-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.project-icon {
+  font-size: 2.5rem;
+  line-height: 1;
+  padding: 10px;
+  background: linear-gradient(135deg, var(--project-color), rgba(139, 92, 246, 0.8));
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 60px;
+  height: 60px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.project-info {
+  flex: 1;
+}
+
+.project-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 8px;
+  line-height: 1.3;
+}
+
+.project-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.project-platform {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--project-color);
+}
+
+.project-period {
+  font-size: 0.9rem;
+  color: #64748b;
+  font-style: italic;
+}
+
+.project-badge {
+  padding: 6px 12px;
+  background: var(--project-color);
+  color: white;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  white-space: nowrap;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.project-content {
+  margin-bottom: 25px;
+}
+
+.audio-player {
+  margin-top: 20px;
+  padding: 15px;
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.audio-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--project-color);
+  margin-bottom: 10px;
+  margin-top: 0;
+}
+
+.audio-player audio {
+  width: 100%;
+  height: 40px;
+}
+
+.project-description {
+  font-size: 1rem;
+  color: #374151;
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+
+.project-achievements {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.achievement-item {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #4b5563;
+}
+
+.achievement-item::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  color: var(--project-color);
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.project-technologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #e2e8f0;
+}
+
+.project-tech-tag {
+  background: linear-gradient(135deg, var(--project-color), rgba(59, 130, 246, 0.8));
+  color: white;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.project-tech-tag:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+  
+  .project-card {
+    padding: 25px;
+  }
+  
+  .project-header {
+    gap: 12px;
+  }
+  
+  .project-icon {
+    font-size: 2rem;
+    min-width: 50px;
+    height: 50px;
+  }
+  
+  .project-title {
+    font-size: 1.3rem;
+  }
+  
+  .projects-intro p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .project-meta {
+    flex-direction: column;
+  }
+  
+  .project-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .project-badge {
+    align-self: flex-start;
+  }
+} 
